@@ -1,4 +1,4 @@
-# ganglia
+# ganglia by Arley Silveira
 
 #### Table of Contents
 
