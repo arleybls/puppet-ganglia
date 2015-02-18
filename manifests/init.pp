@@ -35,7 +35,22 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class ganglia {
+class ganglia (
+   # http://sourceforge.net/projects/ganglia/files/ganglia monitoring core/3.6.0/ganglia-3.6.0.tar.gz
+   $ganglia_core_version   = $ganglia::params::ganglia_core_version,
+   $ganglia_web_version    = $ganglia::params::ganglia_web_version,
+   $nginx_version          = $ganglia::params::nginx_version,
+   $php_version            = $ganglia::params::php_version
+   
+) inherits ganglia::params {
 
-
+   validate_string($ganglia_core_version)
+   validate_string($ganglia_web_version)
+   validate_string($nginx_version)
+   validate_string($php_version)
+   
 }
+
+
+
+
